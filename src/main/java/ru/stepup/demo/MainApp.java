@@ -2,14 +2,16 @@ package ru.stepup.demo;
 
 public class MainApp {
     public static void main(String[] args) {
-        System.out.println("Hello, Test!");
-        System.out.println(add(5, 2));
+        Cat cat1 = new Cat("Barsik", 2, 8.5f, "black");
+        Cat cat2 = new Cat();
+        cat2.setName("Murzic");
+        cat2.setAge(4);
+        cat2.setWeight(6.70F);
+        cat2.setColor("orange");
 
-        Cat cat = new Cat();
-        cat.setName("Barsik");
-        System.out.println(cat.getName());
 
         System.out.println(substract(3, 2));
+        System.out.println(add(5, 2));
     }
 
 
