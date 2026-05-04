@@ -2,8 +2,8 @@ package ru.stepup.demo;
 
 public class MainApp {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
-        System.out.println(add(0, 2));
+        System.out.println("Hello, ALL!");
+        System.out.println(add(5, 2));
         Cat cat = new Cat();
         cat.setName2("Barsik");
         System.out.println(cat.getName2());
