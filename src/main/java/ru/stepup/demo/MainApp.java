@@ -8,14 +8,15 @@ public class MainApp {
         cat.setName2("Barsik");
         System.out.println(cat.getName2());
 
-        System.out.println(substract(3,2));
+        System.out.println(substract(3, 2));
     }
 
 
     public static int add(int a, int b) {
         return a + b;
     }
-    public static int substract (int c,int d){
-        return(c-d);
+
+    public static int substract(int c, int d) {
+        return (c - d);
     }
 }
