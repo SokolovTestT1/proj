@@ -6,8 +6,8 @@ public class MainApp {
         System.out.println(add(5, 2));
 
         Cat cat = new Cat();
-        cat.setName2("Barsik");
-        System.out.println(cat.getName2());
+        cat.setName("Barsik");
+        System.out.println(cat.getName());
 
         System.out.println(substract(3, 2));
     }

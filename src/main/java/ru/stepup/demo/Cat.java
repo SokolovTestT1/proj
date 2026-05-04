@@ -1,13 +1,13 @@
 package ru.stepup.demo;
 
 public class Cat {
-    private String name2;
+    private String name;
     // TODO сменить тип на Enum
     private String color;
     private int age;
 
-    public Cat(String name2, String color, int age) {
-        this.name2 = name2;
+    public Cat(String name, String color, int age) {
+        this.name = name;
         this.color = color;
         this.age = age;
     }
@@ -15,12 +15,12 @@ public class Cat {
     public Cat() {
     }
 
-    public String getName2() {
-        return name2;
+    public String getName() {
+        return name;
     }
 
-    public void setName2(String name2) {
-        this.name2 = name2;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setColor(String color) {
