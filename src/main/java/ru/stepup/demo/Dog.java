@@ -11,6 +11,9 @@ public class Dog {
         this.weight = weight;
     }
 
+    public Dog() {
+    }
+
     public String getName() {
         return name;
     }

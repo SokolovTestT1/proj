@@ -12,6 +12,9 @@ public class MainApp {
 
         System.out.println(substract(3, 2));
         System.out.println(add(5, 2));
+
+        Dog dog = new Dog();
+        Dog dog1 = new Dog("Sharick",3,10.1f);
     }
 
 
