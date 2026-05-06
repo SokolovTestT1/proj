@@ -15,6 +15,7 @@ public class MainApp {
 
         Dog dog = new Dog();
         Dog dog1 = new Dog("Sharick",3,10.1f);
+        dog.sayBark();
     }
 
 

@@ -37,4 +37,8 @@ public class Dog {
     public void setWeight(float weight) {
         this.weight = weight;
     }
+
+    public void sayBark(){
+        System.out.println("Bark");
+    }
 }
