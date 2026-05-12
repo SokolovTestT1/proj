@@ -35,5 +35,8 @@ public class Start {
         System.out.println("d2 = " + d2);
         d2 = d2 * 98; // потеря данных из-за неточности
         System.out.println("d2 = " + d2);
+
+        int i = Integer.max(900,1000);
+        System.out.println("i = " + i);
     }
 }
