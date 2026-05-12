@@ -10,7 +10,30 @@ public class Start {
         // складываем
         int sum = x + y;
         // выводим
-        System.out.println(x+" + "+y+" = "+sum);
+        System.out.println(x + " + " + y + " = " + sum);
         System.out.println(var2);
+
+
+        double d = Double.MAX_VALUE;
+        System.out.println(d);
+
+        byte b = 127;
+        b++;
+        System.out.println(b);
+
+        int a = Integer.MIN_VALUE;
+        a--;
+        System.out.println("a = Integer.MIN_VALUE - 1 = " + a);
+
+
+        double d1 = 1;
+        double sum1 = d1 / 0;
+        System.out.println("d1/0 = " + sum1);
+
+        double d2 = 1;
+        d2 = d2 / 98;
+        System.out.println("d2 = " + d2);
+        d2 = d2 * 98; // потеря данных из-за неточности
+        System.out.println("d2 = " + d2);
     }
 }

@@ -46,7 +46,7 @@ public class DataTypes {
     long myLong = 9_223_372_036_854_775_807L; // обязательно 'L' в конце
 
     float myFloat = 3.14f;                // обязательно 'f' или 'F'
-    double myDouble = 3.141592653589793;  // по умолчанию для дробных
+    double myDouble = 3.141592653589793;// по умолчанию для дробных
 
     boolean myBoolean = true;             // или false
     char myChar = 'A';                    // один символ в одинарных кавычках
@@ -74,8 +74,7 @@ public class DataTypes {
      * - Вызова методов (например, Integer.parseInt("123"))
      *
      * Пример:
-     */
-    Integer myInteger = 100;              // автоупаковка (autoboxing)
+     */ Integer myInteger = 100;              // автоупаковка (autoboxing)
     int primitiveInt = myInteger;         // распаковка (unboxing)
 
     /*
@@ -86,8 +85,7 @@ public class DataTypes {
      * Это объекты, создаваемые через классы, интерфейсы, массивы.
      *
      * Примеры:
-     */
-    String myString = "Hello, Java!";     // строка — ссылочный тип
+     */ String myString = "Hello, Java!";     // строка — ссылочный тип
     int[] myArray = {1, 2, 3};            // массив — ссылочный тип
     Object obj = new Object();            // любой объект
 
@@ -111,15 +109,13 @@ public class DataTypes {
      *    Меньший тип автоматически приводится к большему.
      *
      *    Пример:
-     */
-    int a = 100;
+     */ int a = 100;
     long b = a;  // OK: int -> long
 
     /*
      * B. Явное преобразование (сужающее, narrowing):
      *    Может привести к потере данных.
-     */
-    long bigNumber = 1000L;
+     */ long bigNumber = 1000L;
     int smallNumber = (int) bigNumber;  // явное приведение
 
     // Пример потери данных:
@@ -127,8 +123,7 @@ public class DataTypes {
 
     /*
      * Особенности при работе с вещественными числами:
-     */
-    double d1 = 0.1 + 0.2;
+     */ double d1 = 0.1 + 0.2;
     // System.out.println(d1); // вывод: 0.30000000000000004
     // Причина: неточность представления чисел с плавающей точкой.
 
@@ -145,15 +140,13 @@ public class DataTypes {
      *
      * A. ClassCastException
      *    Возникает при неверном приведении типов.
-     */
-    Object objStr = "Hello";
+     */ Object objStr = "Hello";
     // String s = (Integer) objStr; // ClassCastException!
 
     /*
      * B. NullPointerException
      *    При попытке использовать null как объект.
-     */
-    String nullStr = null;
+     */ String nullStr = null;
     // int len = nullStr.length(); // NullPointerException
 
     /*
