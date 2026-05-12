@@ -1,4 +1,4 @@
-package ru.stepup.demo;
+package DataTypes;
 
 /**
  * Класс DataTypes содержит информацию о типах данных в Java.

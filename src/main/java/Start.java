@@ -11,15 +11,15 @@ public class Start {
         int sum = x + y;
         // выводим
         System.out.println(x + " + " + y + " = " + sum);
-        System.out.println(var2);
+        System.out.println("var2 = " + var2);
 
 
         double d = Double.MAX_VALUE;
-        System.out.println(d);
+        System.out.println("d = " + d);
 
         byte b = 127;
         b++;
-        System.out.println(b);
+        System.out.println("b = " + b);
 
         int a = Integer.MIN_VALUE;
         a--;
