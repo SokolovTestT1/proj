@@ -4,12 +4,16 @@ public class Tasks {
     public static void main(String[] args) {
         System.out.println("метод fraction");
         System.out.println(fraction(2.7));
+
+        System.out.println("метод notEqual");
         System.out.println(notEqual(1, 2, 3));
         System.out.println(notEqual(1, 3, 3));
         System.out.println(notEqual(2, 2, 2));
 
         System.out.println("метод fraction2");
         System.out.println(fraction2(2.7));
+
+        System.out.println("метод sumLastNums");
         System.out.println(sumLastNums(1232));
 
         System.out.println("метод charToNum");
