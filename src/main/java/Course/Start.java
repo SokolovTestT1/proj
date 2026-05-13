@@ -28,9 +28,9 @@ public class Start {
         System.out.println("a = Integer.MIN_VALUE - 1 = " + a);
 
 
-        double d1 = 1;
-        double sum1 = d1 / 0;
-        System.out.println("d1/0 = " + sum1);
+        double d1 = 4;
+        double sum1 = d1 / 2;
+        System.out.println("d1/2 = " + sum1);
 
         double d2 = 1;
         d2 = d2 / 98;
@@ -40,5 +40,7 @@ public class Start {
 
         int i = Integer.max(900,1000);
         System.out.println("i = " + i);
+
+        System.out.println("Tasks.notEqual " + Tasks.notEqual(4,4,4));
     }
 }

@@ -8,7 +8,7 @@ public class Operations {
         y--;
         System.out.println("x = " + x);
         System.out.println("y = " + y);
-//      Бинарные операции
+        //Бинарные операции
         System.out.println("x + y = " + (x + y));
         System.out.println("x - y = " + (x - y));
         System.out.println("x * y = " + (x * y));
