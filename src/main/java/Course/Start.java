@@ -1,5 +1,7 @@
 package Course;
 
+import Course.clas_and_methods.Tasks;
+
 public class Start {
     public static void main(String[] args) {
         int var1 = 1;

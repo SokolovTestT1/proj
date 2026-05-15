@@ -1,4 +1,4 @@
-package Course;
+package Course.clas_and_methods;
 
 public class Methods {
     public static void main(String[] args) {
