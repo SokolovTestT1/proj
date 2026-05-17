@@ -1,29 +1,132 @@
 package Course.clas_and_methods;
 
-public class Methods {
-    public static void main(String[] args) {
-        int num = sum(2,3);
-        num = sum(num,5);
-        System.out.println("num = " + num);
-        helloName("Dima");
-        System.out.println(isLowerCase('a'));
-        System.out.println(isLowerCase('A'));
+/**
+ * Класс Methods — демонстрация основных концепций методов в Java.
+ *
+ * МЕТОДЫ В JAVA — ТЕОРИЯ:
+ *
+ * 1. Что такое метод?
+ *    Метод — это блок кода, предназначенный для выполнения определённой задачи.
+ *    Он позволяет повторно использовать код, делает программу более структурированной и читаемой.
+ *
+ * 2. Синтаксис объявления метода:
+ *    [модификатор доступа] [static] [тип возвращаемого значения] имяМетода([параметры]) {
+ *        // тело метода
+ *        return значение; // если тип возвращаемого значения не void
+ *    }
+ *
+ *    Пример:
+ *    public static int sum(int a, int b) { ... }
+ *
+ *    - public — модификатор доступа (видимость из любого места)
+ *    - static — метод принадлежит классу, а не объекту (вызывается без создания экземпляра)
+ *    - int — тип возвращаемого значения
+ *    - sum — имя метода
+ *    - (int a, int b) — параметры (входные данные)
+ *
+ * 3. Возвращаемое значение:
+ *    - Если метод возвращает значение, используется ключевое слово `return`.
+ *    - Если метод ничего не возвращает, используется тип `void`.
+ *
+ * 4. Параметры:
+ *    - Метод может принимать ноль или несколько параметров.
+ *    - Параметры передаются по значению (для примитивов) или по ссылке (для объектов).
+ *
+ * 5. Перегрузка методов (overloading):
+ *    - В одном классе можно иметь несколько методов с одинаковым именем,
+ *      но разными параметрами (по количеству, типу или порядку).
+ *    - Возвращаемый тип не участвует в перегрузке.
+ *
+ * 6. Рекурсия:
+ *    - Метод может вызывать сам себя. Это называется рекурсией.
+ *    - Важно иметь условие выхода, чтобы избежать бесконечного вызова.
+ *
+ * 7. Область видимости переменных:
+ *    - Переменные, объявленные внутри метода, существуют только в нём (локальные переменные).
+ *
+ * 8. Вызов метода:
+ *    - Для static-методов: ИмяКласса.имяМетода(аргументы) или просто имяМетода(аргументы) внутри класса.
+ *    - Для не-static методов: нужно создать объект класса.
+ */
 
-        System.out.println(toUpperCase('q'));
+public class Methods {
+
+    public static void main(String[] args) {
+        // Пример вызова метода с возвращаемым значением
+        int num = sum(2, 3);
+        num = sum(num, 5);
+        System.out.println("num = " + num);
+
+        // Пример вызова void-метода
+        helloName("Dima");
+
+        // Пример метода с логическим возвращаемым значением
+        System.out.println(isLowerCase('a')); // true
+        System.out.println(isLowerCase('A')); // false
+
+        // Пример метода, возвращающего char
+        System.out.println(toUpperCase('q')); // Q
+
+        // Пример перегрузки методов
+        System.out.println("Сумма 3 + 4 = " + sum(3, 4));
+        System.out.println("Сумма 1.5 + 2.7 = " + sum(1.5, 2.7));
+        System.out.println("Сумма 1 + 2 + 3 = " + sum(1, 2, 3));
+
+        // Пример рекурсии
+        System.out.println("Факториал 5 = " + factorial(5));
     }
-    public static int sum(int x, int y){
+
+    // Пример метода с возвращаемым значением
+    public static int sum(int x, int y) {
         int result = x + y;
         return result;
     }
-    public static void helloName(String name){
+
+    // Перегрузка метода sum для работы с double
+    public static double sum(double x, double y) {
+        return x + y;
+    }
+
+    // Перегрузка метода sum для трёх целых чисел
+    public static int sum(int x, int y, int z) {
+        return x + y + z;
+    }
+
+    // Пример void-метода (ничего не возвращает)
+    public static void helloName(String name) {
         System.out.println("Hello " + name);
     }
-    public static boolean isLowerCase(char ch){
+
+    // Метод с логическим возвращаемым значением
+    public static boolean isLowerCase(char ch) {
         return ch >= 'a' && ch <= 'z';
     }
-    public static char toUpperCase(char ch){
-        int diff = 'a' - 'A'; // находим разницу в кодах маленьких и больших букв
-        int res = ch - diff; // уменьшаем код буквы на разницу, чтобы получить код большой буквы
-        return (char) res; // получанную букву приводим к типу char и возвращаем
+
+    // Метод, преобразующий символ в верхний регистр
+    public static char toUpperCase(char ch) {
+        if (isLowerCase(ch)) {
+            int diff = 'a' - 'A'; // разница между кодами 'a' и 'A'
+            return (char) (ch - diff);
+        }
+        return ch; // если уже заглавная, возвращаем как есть
+    }
+
+    // Пример рекурсивного метода — вычисление факториала
+    public static int factorial(int n) {
+        if (n <= 1) {
+            return 1; // условие выхода из рекурсии
+        }
+        return n * factorial(n - 1); // вызов самого себя
+    }
+
+    // Пример метода с локальной переменной
+    public static void demonstrateLocalVariable() {
+        int localVar = 10; // существует только внутри этого метода
+        System.out.println("Локальная переменная: " + localVar);
+    }
+
+    // Пример метода без параметров
+    public static void greet() {
+        System.out.println("Привет от метода без параметров!");
     }
 }
