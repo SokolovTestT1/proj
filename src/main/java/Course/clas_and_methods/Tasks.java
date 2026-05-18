@@ -114,6 +114,8 @@ class Task10 {
         result = lastNumSum(result, 14);
         result = lastNumSum(result, 1);
         System.out.println(result);
+
+        System.out.println(Tasks.charToNum('Q'));
     }
 
     public static int lastNumSum(int a, int b) {
