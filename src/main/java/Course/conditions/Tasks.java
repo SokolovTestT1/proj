@@ -65,12 +65,14 @@ public class Tasks {
         return false;
     }
 
-    public static boolean magic6(int x, int y){
-        if (x == 6 || y == 6){
+    public static boolean magic6(int x, int y) {
+        if (x == 6 || y == 6) {
             return true;
-        } if (x + y == 6){
+        }
+        if (x + y == 6) {
             return true;
-        } if (x - y == 6 || y - x == 6){
+        }
+        if (x - y == 6 || y - x == 6) {
             return true;
         } else return false;
     }
@@ -97,6 +99,54 @@ public class Tasks {
         }
     }
 
+    public static String day(int x) {
+        switch (x) {
+            case 1:
+                return "понедельник";
+            case 2:
+                return "вторник";
+            case 3:
+                return "среда";
+            case 4:
+                return "четверг";
+            case 5:
+                return "пятница";
+            case 6:
+                return "суббота";
+            case 7:
+                return "воскресенье";
+            default:
+                return "это не день недели";
+        }
+    }
+
+    public static void printDays(String x) {
+        switch (x) {
+            case "понедельник":
+                System.out.println("понедельник");
+                break;
+            case "вторник":
+                System.out.println("вторник");
+                break;
+            case "среда":
+                System.out.println("среда");
+                break;
+            case "четверг":
+                System.out.println("четверг");
+                break;
+            case "пятница":
+                System.out.println("пятница");
+                break;
+            case "суббота":
+                System.out.println("суббота");
+                break;
+            case "воскресенье":
+                System.out.println("воскресенье");
+                break;
+            default:
+                System.out.println("это не день недели");
+        }
+    }
 
     public static void main(String[] args) {
         System.out.println("Метод abs");
@@ -144,5 +194,17 @@ public class Tasks {
         System.out.println(age(5));
         System.out.println(age(11));
         System.out.println(age(100));
+
+        System.out.println("Метод day");
+        System.out.println(day(1));
+        System.out.println(day(5));
+        System.out.println(day(7));
+        System.out.println(day(8));
+
+        System.out.println("Метод printDays");
+        printDays("понедельник");
+        printDays("вторник");
+        printDays("пятница");
+        printDays("тест");
     }
 }
