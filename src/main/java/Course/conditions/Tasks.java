@@ -147,6 +147,26 @@ public class Tasks {
                 System.out.println("это не день недели");
         }
     }
+    public static String season(int month) {
+        if (month == 12 || month == 1 || month == 2) {
+            return "Зима";
+        } else if (month == 3 || month == 4 || month == 5) {
+            return "Весна";
+        } else if (month == 6 || month == 7 || month == 8) {
+            return "Лето";
+        } else if (month == 9 || month == 10 || month == 11) {
+            return "Осень";
+        } else return "некорректный месяц";
+    }
+    /* public static String season(int month) {
+        return switch (month) {
+            case 12, 1, 2 -> "Зима";
+            case 3, 4, 5 -> "Весна";
+            case 6, 7, 8 -> "Лето";
+            case 9, 10, 11 -> "Осень";
+            default -> "некорректный месяц";
+        };
+    } */
 
     public static void main(String[] args) {
         System.out.println("Метод abs");
@@ -206,5 +226,12 @@ public class Tasks {
         printDays("вторник");
         printDays("пятница");
         printDays("тест");
+
+        System.out.println("Метод season");
+        System.out.println(season(1));
+        System.out.println(season(3));
+        System.out.println(season(6));
+        System.out.println(season(10));
+        System.out.println(season(13));
     }
 }
