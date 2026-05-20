@@ -26,8 +26,21 @@ package Course.conditions;
  */
 
 public class Conditions {
+    // пример из курса
+    public static void operations(int a, int b, char op) {
+        int result;
+        switch (op) {
+            case '+': result = a + b; break;
+            case '-': result = a - b; break;
+            case '*': result = a * b; break;
+            case '/': result = a / b; break;
+            default: result = 0;
+        }
+        System.out.println("Результат: " + result);
+    }
 
     public static void main(String[] args) {
+
         int age = 18;
         boolean hasLicense = true;
 
@@ -91,5 +104,11 @@ public class Conditions {
         // Пример 5: тернарный оператор (сокращённая форма if-else)
         String result = (age >= 18) ? "Доступ разрешён" : "Доступ запрещён";
         System.out.println(result);
+
+        System.out.println("метод operations");
+        operations(10, 5, '+');
+        operations(10, 5, '-');
+        operations(10, 5, '*');
+        operations(10, 5, '/');
     }
 }
