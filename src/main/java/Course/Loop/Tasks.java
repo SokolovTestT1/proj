@@ -114,7 +114,7 @@ public class Tasks {
         return true;
     }
 
-    public static void square(int x){
+    public static void square(int x) {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
                 System.out.print("*");
@@ -122,18 +122,19 @@ public class Tasks {
             System.out.println();
         }
     }
+
     /**
      * Выводит на экран левый прямоугольный треугольник из символов '*',
      * где количество строк равно x, а в строке номер i (1..x) — ровно i звёздочек.
      *
      * @param x высота треугольника (число строк)
-     * <p>
-     * Пример при x = 5:
-     * *
-     * **
-     * ***
-     * ****
-     * *****
+     *          <p>
+     *          Пример при x = 5:
+     *          *
+     *          **
+     *          ***
+     *          ****
+     *          *****
      */
     public static void leftTriangle(int x) {
         for (int i = 1; i <= x; i++) {  // строки от 1 до x
@@ -143,18 +144,19 @@ public class Tasks {
             System.out.println(); // переходим на новую строку
         }
     }
+
     /**
      * Выводит на экран прямоугольный треугольник из символов '*',
      * выровненный по правому краю. Высота треугольника — x строк,
      * в строке номер i (1..x) должно быть i звёздочек, выровненных по правому краю.
      *
      * @param x высота треугольника
-     * Пример при x = 5:
-     *     *
-     *    **
-     *   ***
-     *  ****
-     * *****
+     *          Пример при x = 5:
+     *          *
+     *          **
+     *          ***
+     *          ****
+     *          *****
      */
     public static void rightTriangle(int x) {
         for (int i = 1; i <= x; i++) {
@@ -200,7 +202,7 @@ public class Tasks {
         System.out.println("You guessed it in " + attempts + " attempts.");
     }
 
-    public static void printMultiplicationTable(int n){
+    public static void printMultiplicationTable(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 System.out.printf(i * j + " ");
@@ -208,6 +210,7 @@ public class Tasks {
             System.out.println();
         }
     }
+
     /**
      * Проверяет, является ли число палиндромом (читается одинаково слева направо и справа налево).
      * Отрицательные числа не считаются палиндромами.
@@ -259,15 +262,15 @@ public class Tasks {
      * Центр ромба (самая широкая строка) содержит 2*n - 1 звёздочек.
      *
      * @param n параметр размера ромба
-     *
-     * Пример при n = 4:
-     *    *
-     *   ***
-     *  *****
-     * *******
-     *  *****
-     *   ***
-     *    *
+     *          <p>
+     *          Пример при n = 4:
+     *          *
+     *          ***
+     *          *****
+     *          *******
+     *          *****
+     *          ***
+     *          *
      */
     public static void printDiamond(int n) {
         // 1. Верхняя часть (включая середину)
@@ -306,7 +309,7 @@ public class Tasks {
      *
      * @param x число для проверки
      * @return true, если число простое, иначе false
-     *
+     * <p>
      * Примеры:
      * isPrime(2)  → true
      * isPrime(3)  → true
@@ -331,17 +334,18 @@ public class Tasks {
         // Шаг 3: если делителей не нашли — число простое
         return true;
     }
+
     /**
      * Выводит первые n чисел ряда Фибоначчи через пробел.
      * Ряд Фибоначчи: 0, 1, 1, 2, 3, 5, 8, 13, ...
      * Каждое следующее число — сумма двух предыдущих.
      *
      * @param n количество чисел для вывода
-     *
-     * Примеры:
-     * printFibonacci(1) → 0
-     * printFibonacci(2) → 0 1
-     * printFibonacci(7) → 0 1 1 2 3 5 8
+     *          <p>
+     *          Примеры:
+     *          printFibonacci(1) → 0
+     *          printFibonacci(2) → 0 1
+     *          printFibonacci(7) → 0 1 1 2 3 5 8
      */
     public static void printFibonacci(int n) {
         // Шаг 1: если n <= 0 — выходим
@@ -385,9 +389,7 @@ public class Tasks {
     }
 
 
-
-
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("метод listNums");
         listNums(10);
 
