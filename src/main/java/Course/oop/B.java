@@ -9,6 +9,8 @@ public class B {
         a3.str = "changed";
         A a4 = null;
 
+        a1.print(1);
+
         a1.print(); // some text
         a2.print(); // changed
         a3.print(); // changed

@@ -1,5 +1,8 @@
 package Course.oop;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Start {
     static void main() {
         Stack s1 = new Stack();
@@ -11,5 +14,9 @@ public class Start {
         System.out.println(s2.pop());
         System.out.println(s1.pop());
         System.out.println(s1.pop());
+
+        A a = new A("text");
+        System.out.println(a);
+        System.out.println(s1);
     }
 }
