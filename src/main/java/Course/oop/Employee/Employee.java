@@ -8,6 +8,11 @@ public class Employee {
         this.name = name;
     }
 
+    public Employee(Department dep, String name) {
+        this.dep = dep;
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         if (this == dep.boss) return name + " boss in " + dep.name;

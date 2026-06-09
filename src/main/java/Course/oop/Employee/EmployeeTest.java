@@ -6,9 +6,7 @@ public class EmployeeTest {
         Department dep = new Department(e, "IT");
         Employee e1 = new Employee("John");
         e1.dep = dep;
-        Employee e2 = new Employee("Peter");
-
-        e2.dep = dep;
+        Employee e2 = new Employee(dep, "Peter");
         System.out.println(e1);
         System.out.println(e2);
 
