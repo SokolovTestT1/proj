@@ -1,5 +1,8 @@
 package Course.oop.inicialization;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 public class Name {
 /* Это пример неудачного кода
     public Name(String personName, String familyName, String patronymic) {
@@ -56,6 +59,16 @@ public class Name {
         }
         public Name(String personName, String familyName) {
             this(personName, familyName, "");
+        }
+
+        @Contract(value = "_, _ -> new", pure = true)
+        public static @NotNull Name ofPersonNameAndFamilyName(String personName, String familyName) {
+            return new Name(personName, familyName, "");
+        }
+
+        @Contract(value = "_, _ -> new", pure = true)
+        public static @NotNull Name ofPersonNameAndPatronymic(String personName, String patronymic) {
+            return new Name(personName, "", patronymic);
         }
         public Name(String personName) {
             this(personName, "", "");
