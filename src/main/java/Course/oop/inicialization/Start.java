@@ -33,5 +33,16 @@ public class Start {
         Integer i3 = Integer.valueOf(50);
         Integer i4 = 50;
         System.out.println(i3 == i4); //true
+
+        NameBuilder builder = new NameBuilder();
+        Name name3 = builder
+                .addFamilyName("Иванов")
+                .addPersonName("Иван")
+                .build();
+        System.out.println(name3);
+        Name name4 = builder
+                .addPatronymic("Иванович")
+                .build(); //"Иванов Иван Иванович
+        System.out.println(name4);
     }
 }

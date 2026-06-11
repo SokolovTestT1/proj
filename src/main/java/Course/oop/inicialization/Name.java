@@ -117,4 +117,13 @@ public class Name {
         public Name(String personName) {
             this(personName, "", "");
         }
+
+    @Override
+    public String toString() {
+        return "Name{" +
+                "personName='" + personName + '\'' +
+                ", familyName='" + familyName + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                '}';
+    }
 }
