@@ -1,4 +1,4 @@
-package Course.oop.inicialization.Task;
+package Course.oop.Task;
 
 public class Main {
     public static void main(String[] args) {

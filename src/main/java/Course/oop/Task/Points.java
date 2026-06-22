@@ -1,4 +1,4 @@
-package Course.oop.inicialization.Task;
+package Course.oop.Task;
 
 public class Points {
     private int x;
