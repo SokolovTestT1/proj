@@ -64,3 +64,43 @@ class B { // immutable
                 '}';
     }
 }
+
+class A1 {
+    private B1 b1;
+
+    public B1 getB1() {
+        return new B1(b1.x);
+    }
+
+    public void setB1(B1 b1) {
+        if (b1.x < 0)
+            throw new IllegalArgumentException("x must be positive");
+        this.b1 = new B1(b1.x);
+    }
+
+    @Override
+    public String toString() {
+        return "A1{" +
+                "b1=" + b1 +
+                '}';
+    }
+}
+
+
+
+class B1 {
+    int x;
+
+    public B1(int x) {
+        this.x = x;
+    }
+
+    @Override
+    public String toString() {
+        return "B1{" +
+                "x=" + x +
+                '}';
+    }
+}
+
+
