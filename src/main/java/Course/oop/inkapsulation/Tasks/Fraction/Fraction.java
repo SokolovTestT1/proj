@@ -1,4 +1,4 @@
-package Course.oop.inkapsulation.Tasks;
+package Course.oop.inkapsulation.Tasks.Fraction;
 
 public class Fraction {
     // Требование 1: Имеет числитель: целое число.

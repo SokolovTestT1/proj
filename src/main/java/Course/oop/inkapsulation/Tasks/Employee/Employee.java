@@ -1,4 +1,4 @@
-package Course.oop.inkapsulation.Tasks;
+package Course.oop.inkapsulation.Tasks.Employee;
 
 public class Employee {
     private String name;

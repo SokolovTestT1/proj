@@ -1,4 +1,4 @@
-package Course.oop.inkapsulation.Tasks;
+package Course.oop.inkapsulation.Tasks.Square;
 
 import Course.oop.Task.Points;
 

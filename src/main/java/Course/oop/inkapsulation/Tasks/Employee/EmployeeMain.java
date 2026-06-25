@@ -1,4 +1,4 @@
-package Course.oop.inkapsulation.Tasks;
+package Course.oop.inkapsulation.Tasks.Employee;
 
 public class EmployeeMain {
     public static void main(String[] args) {

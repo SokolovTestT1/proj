@@ -1,4 +1,4 @@
-package Course.oop.inkapsulation.Tasks;
+package Course.oop.inkapsulation.Tasks.Fraction;
 
 /**
  * Тестовый класс для проверки задания 3.1. Дробь.
