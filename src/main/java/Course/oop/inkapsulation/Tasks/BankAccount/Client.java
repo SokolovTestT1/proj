@@ -5,23 +5,18 @@ public class Client {
     private int passportSeries, passportNumber;
     private BankAccount[] accounts = new BankAccount[0];
 
-    // Конструктор с паспортными данными и без счетов (массив счетов пустой)
-    public Client(String name, String surname, int passportSeries, int passportNumber) {
-        this.name = validateNameParam(name, "name");
-        this.surname = validateNameParam(surname, "surname");
-        this.passportSeries = validatePassportSeries(passportSeries);
-        this.passportNumber = validatePassportNumber(passportNumber);
-    }
-
-    // Конструктор с паспортными данными и массивом счетов
+    // Полный конструктор — «базовый»: принимает всё, включая массив счетов
     public Client(String name, String surname, int passportSeries, int passportNumber, BankAccount[] accounts) {
         this.name = validateNameParam(name, "name");
         this.surname = validateNameParam(surname, "surname");
         this.passportSeries = validatePassportSeries(passportSeries);
         this.passportNumber = validatePassportNumber(passportNumber);
-        if (accounts != null) {
-            this.accounts = accounts.clone();
-        }
+        this.accounts = (accounts != null) ? accounts.clone() : new BankAccount[0];
+    }
+
+    // Сокращённый конструктор — без счетов (создаём пустой массив)
+    public Client(String name, String surname, int passportSeries, int passportNumber) {
+        this(name, surname, passportSeries, passportNumber, new BankAccount[0]);  // 👈 вызов полного конструктора
     }
 
     // Вспомогательные методы валидации — теперь они возвращают проверенное значение
